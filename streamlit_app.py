@@ -57,8 +57,8 @@ if st.number_input("Zip Code", min_value=0):
             st.subheader("Live Percentages")
             col1, col2, col3, col4 = st.columns(4)
             col1.metric(label="% Dominant Candidate", value=49.23, delta=0.78)
-            col2.metric(label="% Dominant Candidate in Missouri", value=66.21, delta=0.30)
-            col3.metric(label="% Dominant Candidate in St. Louis County", value=32.10, delta=-2.13)
-            col4.metric(label="% Dominant Candidate in the Wydown Middle School", value=0.12, delta=0.03)
+            col2.metric(label="% DC in Missouri", value=66.21, delta=0.30)
+            col3.metric(label="% DC in STL Cty.", value=32.10, delta=-2.13)
+            col4.metric(label="% DC in CSD", value=0.12, delta=0.03)
 
             st.error("Donald J. Trump and JD Vance")
