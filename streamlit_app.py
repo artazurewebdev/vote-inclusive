@@ -34,6 +34,8 @@ if st.number_input("Zip Code", min_value=0):
     st.write("Precinct HAD-014 | St. Louis County, Missouri ZIP: 63105")
     st.error("THIS IS NOT A VALID BALLOT!!! THIS IS A VOTING SIMULATOR!!!")
 
+    st.multiselect("Are you with a School District?", ("Not with a School District", "Clayton School District", "Ladue School District", "Pattonville School District", "Other District Near Me"))
+
     st.radio("U.S. President and Vice President", ("Donald J. Trump and JD Vance (REPUBLICAN)", "Kamala D. Harris and Tim Walz (DEMOCRATIC)", "Chase Oliver and Mike Ter Maat (LIBERTARIAN)", "Jill Stein and Rudolph Ware (GREEN)"))
 
     st.radio("U.S. Senator", ("Josh Hawley (REPUBLICAN)", "Lucas Kunce (DEMOCRATIC)", "W. C. Young (LIBERTARIAN)", "Jared Young (BETTER)", "Nathan Kline (GREEN)"))
@@ -48,5 +50,15 @@ if st.number_input("Zip Code", min_value=0):
 
         st.success("CURRENT POLLS (Open)")
 
-        col1, col2, col3, col4, col5 = st.columns(5)
-        col1(f"U.S. PRESIDENT: **Donald J. Trump and JD Vance (REPUBLICAN)**")
+        with st.expander("U.S. President and Vice President"):
+
+            st.markdown("<span style='color:red'> DOMINANT CANDIDATE: Donald J. Trump and JD Vance (REPUBLICAN) </span>", unsafe_allow_html=True)
+
+            st.subheader("Live Percentages")
+            col1, col2, col3, col4 = st.columns(4)
+            col1.metric(label="% Dominant Candidate", value=49.23, delta=0.78)
+            col2.metric(label="% Dominant Candidate in Missouri", value=66.21, delta=0.30)
+            col3.metric(label="% Dominant Candidate in St. Louis County", value=32.10, delta=-2.13)
+            col4.metric(label="% Dominant Candidate in the Wydown Middle School", value=0.12, delta=0.03)
+
+            st.error("Donald J. Trump and JD Vance")
