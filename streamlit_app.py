@@ -17,7 +17,10 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("VoteInclusive 2024 (MISSOURI GATEWAY DISTRICT)")
+st.title("VoteInclusive 2024")
+
+with st.expander("VoteInclusive Polling Centers"):
+    st.write("These Polling Centers are valid national vote centers")
 
 st.sidebar.title("VoteInclusive 2024")
 st.sidebar.subheader("Everybody deserves a vote")
