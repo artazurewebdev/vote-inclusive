@@ -43,3 +43,10 @@ if st.number_input("Zip Code", min_value=0):
     st.radio("Attorney General", ("Andrew Bailey (REPUBLICAN)", "Elad Jonathan Gross (DEMOCRATIC)", "Ryan L. Munro (LIBERTARIAN)"))
 
     st.radio("State Representative", ("Ian Mackey (DEMOCRATIC)", "OTHER CANDIDATE"))
+
+    if st.button("Submit Ballot"):
+
+        st.success("CURRENT POLLS (Open)")
+
+        col1, col2, col3, col4, col5 = st.columns(5)
+        col1(f"U.S. PRESIDENT: **Donald J. Trump and JD Vance (REPUBLICAN)**")
