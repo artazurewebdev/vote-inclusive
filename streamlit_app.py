@@ -21,6 +21,7 @@ st.title("VoteInclusive 2024")
 
 with st.expander("VoteInclusive Polling Centers"):
     st.write("These Polling Centers are valid national vote centers")
+    st.warning("Not available until November 5, 2024 at 7:00AM")
 
 st.sidebar.title("VoteInclusive 2024")
 st.sidebar.subheader("Everybody deserves a vote")
