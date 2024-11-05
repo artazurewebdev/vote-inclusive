@@ -24,6 +24,7 @@ with st.expander("VoteInclusive Polling Centers"):
 
 st.sidebar.title("VoteInclusive 2024")
 st.sidebar.subheader("Everybody deserves a vote")
+st.sidebar.image("White Navy Blue Modern American Veteran Company Logo.png", width=250)
 
 st.text_input("State Full Name")
 
@@ -62,3 +63,27 @@ if st.number_input("Zip Code", min_value=0):
             col4.metric(label="% DC in CSD", value=0.12, delta=0.03)
 
             st.error("Donald J. Trump and JD Vance")
+
+        with st.expander("U.S Senator"):
+
+            st.markdown("<span style='color:red'> DOMINANT CANDIDATE: Josh Hawley (REPUBLICAN) </span>", unsafe_allow_html=True)
+
+            st.subheader("Live Percentages")
+            col1, col2, col3 = st.columns(3)
+            col1.metric(label="% DC in Missouri", value=66.21, delta=0.30)
+            col2.metric(label="% DC in STL Cty.", value=45.22, delta=-6.17)
+            col3.metric(label="% DC in CSD", value=36.23, delta=-0.12)
+
+            st.error("Josh Hawley")
+
+        with st.expander("Missouri Governor"):
+
+            st.markdown("<span style='color:blue'> DOMINANT CANDIDATE: Crystal Quade (DEMOCRATIC) </span>", unsafe_allow_html=True)
+
+            st.subheader("Live Percentages")
+            col1, col2, col3 = st.columns(3)
+            col1.metric(label="% DC in Missouri", value=69.55, delta=0.04)
+            col2.metric(label="% DC in STL Cty.", value=82.49, delta=0.61)
+            col3.metric(label="% DC in CSD", value=89.23, delta=-0.01)
+
+            st.info("Crystal Quade")
