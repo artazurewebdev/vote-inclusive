@@ -21,11 +21,16 @@ st.title("VoteInclusive 2024")
 
 with st.expander("VoteInclusive Polling Centers"):
     st.write("These Polling Centers are valid national vote centers")
-    st.warning("Not available until November 5, 2024 at 7:00AM")
+    st.warning("POLLING CENTERS ARE CLOSED")
 
 st.sidebar.title("VoteInclusive 2024")
 st.sidebar.subheader("Everybody deserves a vote")
 st.sidebar.image("White Navy Blue Modern American Veteran Company Logo.png", width=250)
+
+st.subheader("Live Results from VoteInclusive Polls")
+
+st.image("Screenshot 2024-11-06 11.14.48 AM.png")
+st.image("download (4).png")
 
 st.text_input("State Full Name")
 
@@ -50,7 +55,7 @@ if st.number_input("Zip Code", min_value=0):
 
     if st.button("Submit Ballot"):
 
-        st.success("CURRENT POLLS (Open)")
+        st.warning("POLLS ARE CLOSED, YOUR VOTE WILL NOT BE COUNTED")
 
         with st.expander("U.S. President and Vice President"):
 
